@@ -7,16 +7,22 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+    
+    private TextView textView;
+    private CarelGrid grid;
+    private GameCanvas canvas;
+    private Carel carel;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        TextView textView = (TextView)findViewById(R.id.textView);
-        CarelGrid grid = new CarelGrid();
-        GameCanvas canvas = new GameCanvas(textView);
-        final Carel carel = new Carel(canvas, grid);
+        textView = (TextView)findViewById(R.id.textView);
+        grid = new CarelGrid();
+        canvas = new GameCanvas(textView);
+        carel = new Carel(canvas, grid);
 
 
         //Ниже идут команды Карелу.
@@ -33,5 +39,36 @@ public class MainActivity extends AppCompatActivity {
 
         //Команды Карелу закончились.
 
+    }
+    
+    
+    //Здесь пишем новые методы.
+    
+    
+    
+    //Новые методы закончились.
+    
+    private void move(){
+        carel.move();
+    }
+    
+    private void turnLeft(){
+        carel.turnLeft();
+    }
+    
+    private void collectBeeper(){
+        carel.collectBeeper();
+    }
+    
+    private void dropBeeper(){
+        carel.dropBeeper();
+    }
+    
+    private boolean isFrontClear(){
+        return carel.isFrontClear();
+    }
+    
+    private boolean isBeeper(){
+        return carel.isBeeper();
     }
 }
