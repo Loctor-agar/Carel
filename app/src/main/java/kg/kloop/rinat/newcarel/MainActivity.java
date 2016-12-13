@@ -22,8 +22,8 @@ public class MainActivity extends AppCompatActivity {
 
         textView = (TextView)findViewById(R.id.textView);
         canvas = new GameCanvas(textView);
-        carel = new Carel(canvas, grid);
         grid = new CarelGrid(6 , 4); // здесь изменяется размер поля
+        carel = new Carel(canvas, grid);
 
 
         //Ниже идут команды Карелу.
@@ -36,7 +36,10 @@ public class MainActivity extends AppCompatActivity {
         * */
 
         move();
-
+        move();
+        move();
+        turnLeft();
+        turnLeft();
 
 
         //Команды Карелу закончились.
