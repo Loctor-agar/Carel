@@ -3,9 +3,7 @@ package kg.kloop.rinat.newcarel;
         import android.os.Handler;
         import android.os.SystemClock;
 
-/**
- * Created by admin on 01.12.2015.
- */
+
 public class Carel extends Object{
 
     public Carel(GameCanvas gameCanvas, CarelGrid grid) {

@@ -7,9 +7,7 @@ import android.view.View;
 import android.widget.TextView;
 
 
-/**
- * Created by admin on 02.12.2015.
- */
+
 public class GameCanvas extends Object {
     public GameCanvas (TextView textView){
         view = textView;

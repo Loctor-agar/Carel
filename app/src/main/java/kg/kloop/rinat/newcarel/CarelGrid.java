@@ -1,16 +1,16 @@
 package kg.kloop.rinat.newcarel;
 
 
-/**
- * Created by admin on 02.12.2015.
- */
+
 public class CarelGrid extends Object {
 
-    public CarelGrid() {
-        map = new int[6][4];
-        map[1][1] = 1;
-        map [3][3] = 1;
-        map [3] [2] = 1;
+    public CarelGrid(int x, int y) {
+        map = new int[x][y];
+        if(getWidth() <=3 && getHeight() <= 3) {
+            map[1][1] = 1;
+            map[3][3] = 1;
+            map[3][2] = 1;
+        }
     }
 
     public int getWidth() {
@@ -64,6 +64,8 @@ public class CarelGrid extends Object {
     public void setCarelDead(boolean dead) {
         carelDead = dead;
     }
+
+
 
     public void placeBeeper(int x, int y) {
         map[x][y] = map[x][y] + 1;

@@ -19,15 +19,15 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         textView = (TextView)findViewById(R.id.textView);
-        grid = new CarelGrid();
         canvas = new GameCanvas(textView);
         carel = new Carel(canvas, grid);
+        grid = new CarelGrid(6 , 4); // здесь изменяется размер поля
 
 
         //Ниже идут команды Карелу.
-
-        /*
+        /* Задания:
         * 1) Поворот направо
         * 2) Дойти до стены и не умереть
         * 3) Заполнить всё поле биперами, убрав те, которые уже есть
@@ -35,13 +35,7 @@ public class MainActivity extends AppCompatActivity {
         * 5) Квадрат, треугольник и круг* произвольных размеров из биперов
         * */
 
-        carel.move();
-        carel.turnLeft();
-        carel.turnLeft();
-        carel.turnLeft();
-        carel.move();
-        carel.move();
-        carel.move();
+        move();
 
 
 
@@ -52,7 +46,8 @@ public class MainActivity extends AppCompatActivity {
     
     //Здесь пишем новые методы.
     
-    
+
+
     
     //Новые методы закончились.
     
@@ -79,4 +74,5 @@ public class MainActivity extends AppCompatActivity {
     private boolean isBeeper(){
         return carel.isBeeper();
     }
+
 }
