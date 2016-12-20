@@ -5,7 +5,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
+/**
+ * Этот класс предназначен для указания команд Карелу */
 public class MainActivity extends AppCompatActivity {
     
     private TextView textView;
@@ -22,18 +23,26 @@ public class MainActivity extends AppCompatActivity {
 
         textView = (TextView)findViewById(R.id.textView);
         canvas = new GameCanvas(textView);
-        grid = new CarelGrid(6 , 4); // здесь изменяется размер поля
+        grid = new CarelGrid(6 , 4); // здесь изменяется размер поля (x,y)
         carel = new Carel(canvas, grid);
 
 
-        //Ниже идут команды Карелу.
+
         /* Задания:
         * 1) Поворот направо
-        * 2) Дойти до стены и не умереть
-        * 3) Заполнить всё поле биперами, убрав те, которые уже есть
-        * 4) Вертикальная линия биперов посередине поля
-        * 5) Квадрат, треугольник и круг* произвольных размеров из биперов
+        * 2) Разворот
+        * 3) Дойти до стены и не умереть
+        * 4) Заполнить поле биперами по периметру
+        * 5) Заполнить всё поле биперами (убрав те, которые уже есть),
+        * причем в каждой следующей клетке на 1 бипер больше, чем в предыдущей
+        * 6) На начальной клетке выложить сумму всех биперов на поле
+        * 7) Бипер в центре поля
+        * 8) Буква "А" из биперов
+        * 9) Спираль из биперов
+        * 10) Выход из лабиринта
         * */
+
+        //Ниже идут команды Карелу.
 
         move();
         move();

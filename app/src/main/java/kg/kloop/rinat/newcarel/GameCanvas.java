@@ -5,9 +5,8 @@ import android.os.Handler;
 import android.os.SystemClock;
 import android.view.View;
 import android.widget.TextView;
-
-
-
+/**
+ * Этот класс содержит методы для отрисовки поля и Карела  */
 public class GameCanvas extends Object {
     public GameCanvas (TextView textView){
         view = textView;

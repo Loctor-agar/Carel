@@ -1,7 +1,8 @@
 package kg.kloop.rinat.newcarel;
 
 
-
+/**
+ * Этот класс содержит данные поля */
 public class CarelGrid extends Object {
 
     public CarelGrid(int x, int y) {

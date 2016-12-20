@@ -3,7 +3,8 @@ package kg.kloop.rinat.newcarel;
         import android.os.Handler;
         import android.os.SystemClock;
 
-
+/**
+ * Этот класс содержит методы, определяющие поведение Карела*/
 public class Carel extends Object{
 
     public Carel(GameCanvas gameCanvas, CarelGrid grid) {
