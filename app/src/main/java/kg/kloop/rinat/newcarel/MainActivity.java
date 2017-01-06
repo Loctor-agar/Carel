@@ -44,11 +44,9 @@ public class MainActivity extends AppCompatActivity {
 
         //Ниже идут команды Карелу.
 
-        move();
-        move();
-        move();
-        turnLeft();
-        turnLeft();
+
+        carel.turnLeft();
+
 
 
         //Команды Карелу закончились.

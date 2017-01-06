@@ -7,7 +7,7 @@ public class CarelGrid extends Object {
 
     public CarelGrid(int x, int y) {
         map = new int[x][y];
-        if(getWidth() <=3 && getHeight() <= 3) {
+        if(getWidth() >=4 && getHeight() >= 4) {
             map[1][1] = 1;
             map[3][3] = 1;
             map[3][2] = 1;
