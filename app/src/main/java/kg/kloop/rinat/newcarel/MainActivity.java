@@ -19,35 +19,27 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        textView = (TextView)findViewById(R.id.textView);
-        grid = new CarelGrid();
-        canvas = new GameCanvas(textView);
-        carel = new Carel(canvas, grid);
+        init();
 
 
-        //Ниже идут команды Карелу.
+        //Здесь пишем, что Карел должен делать.********************
 
-        carel.move();
-        carel.turnLeft();
-        carel.turnLeft();
-        carel.turnLeft();
-        carel.move();
-        carel.move();
-        carel.move();
+
+        //Дальше ничего не меняем.*********************************
 
 
 
-        //Команды Карелу закончились.
 
-    }
+    }//Здесь пишем новые методы.***********************************
+
+
+
+    //Дальше ничего не меняем.*************************************
     
-    
-    //Здесь пишем новые методы.
-    
-    
-    
-    //Новые методы закончились.
-    
+
+
+
+
     private void move(){
         carel.move();
     }
@@ -70,5 +62,13 @@ public class MainActivity extends AppCompatActivity {
     
     private boolean isBeeper(){
         return carel.isBeeper();
+    }
+
+
+    private void init() {
+        textView = (TextView)findViewById(R.id.textView);
+        grid = new CarelGrid();
+        canvas = new GameCanvas(textView);
+        carel = new Carel(canvas, grid);
     }
 }
