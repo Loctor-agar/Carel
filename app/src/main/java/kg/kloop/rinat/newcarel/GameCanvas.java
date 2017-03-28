@@ -3,6 +3,7 @@ package kg.kloop.rinat.newcarel;
 
 import android.os.Handler;
 import android.os.SystemClock;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
