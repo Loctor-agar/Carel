@@ -34,6 +34,7 @@ public class GameCanvas extends Object {
             }
             view.append("\n \n");
         }
+        Log.v("CarelDebug", view.getText().toString());
     }
 
     private String drawCarel(String text, CarelGrid grid){
