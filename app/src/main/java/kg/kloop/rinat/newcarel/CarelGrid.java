@@ -17,6 +17,7 @@ public class CarelGrid extends Object {
         walls[2][1] = wallBlock;
         walls[2][2] = wallBlock;
         walls[2][3] = wallBlock;
+
     }
 
     public int getWidth() {
