@@ -31,7 +31,7 @@ public class GameCanvas extends Object {
                 if (j == grid.getCarelX() && i == grid.getCarelY()) {
                     sector = drawCarel(Integer.toString(grid.getBeepersNumber(j, i)), grid);
                 } else if (grid.isWallBlock(j, i)){
-                        sector = grid.buildWallBlock();
+                    sector = grid.buildWallBlock();
                 } else {
                     sector = "    " + Integer.toString(grid.getBeepersNumber(j, i)) + "    ";
                 }
@@ -45,7 +45,6 @@ public class GameCanvas extends Object {
         }
         drawWall(grid);
     }
-
 
     private void drawWall(CarelGrid grid) {
         for (int i = 0; i < grid.getWidth(); i++) {
