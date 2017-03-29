@@ -22,11 +22,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         textView = (TextView) findViewById(R.id.textView);
         canvas = new GameCanvas(textView);
         grid = new CarelGrid(6, 4); // здесь изменяется размер поля (x,y)
         carel = new Carel(canvas, grid);
+
 
 
 
@@ -54,13 +54,15 @@ public class MainActivity extends AppCompatActivity {
         * 20) Сделайте что-нибудь крутое
         * */
 
-        //Ниже идут команды Карелу.
 
 
-        carel.turnLeft();
 
 
-        //Команды Карелу закончились.
+
+        //Здесь пишем, что Карел должен делать.********************
+
+
+        //Дальше ничего не меняем.*********************************
 
     }
 
@@ -70,7 +72,19 @@ public class MainActivity extends AppCompatActivity {
 
     //Новые методы закончились.
 
-    private void move() {
+
+
+    //Здесь пишем новые методы.***********************************
+
+
+
+    //Дальше ничего не меняем.*************************************
+    
+
+
+
+
+    private void move(){
         carel.move();
     }
 
@@ -93,5 +107,4 @@ public class MainActivity extends AppCompatActivity {
     private boolean isBeeper() {
         return carel.isBeeper();
     }
-
 }

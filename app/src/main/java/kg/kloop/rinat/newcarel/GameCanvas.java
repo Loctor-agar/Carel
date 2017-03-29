@@ -3,6 +3,7 @@ package kg.kloop.rinat.newcarel;
 
 import android.os.Handler;
 import android.os.SystemClock;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -45,6 +46,7 @@ public class GameCanvas extends Object {
         for (int i = 0; i < grid.getWidth(); i++) {
             view.append(" _____");
         }
+        Log.v("CarelDebug", view.getText().toString());
     }
 
     private String drawCarel(String text, CarelGrid grid) {
