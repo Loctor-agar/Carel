@@ -8,14 +8,9 @@ import java.util.Random;
 public class CarelGrid extends Object {
 
     public CarelGrid() {
-        if (getWidth() >= 4 && getHeight() >= 4) {
-            for (int i = 0; i < getWidth(); i++) {
-                map[random.nextInt(getWidth())][0] = random.nextInt(2);
-            }
-            map[1][1] = 1;
-            map[3][3] = 1;
-            map[3][2] = 1;
-        }
+            map[1][1] = 0;
+            map[3][3] = 0;
+            map[3][2] = 0;
     }
 
     public int getWidth() {
