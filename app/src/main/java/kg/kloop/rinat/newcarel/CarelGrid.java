@@ -9,9 +9,6 @@ public class CarelGrid extends Object {
 
     public CarelGrid() {
         if (getWidth() >= 4 && getHeight() >= 4) {
-            for (int i = 0; i < getWidth(); i++) {
-                map[random.nextInt(getWidth())][0] = random.nextInt(2);
-            }
             map[1][1] = 1;
             map[3][3] = 1;
             map[3][2] = 1;
