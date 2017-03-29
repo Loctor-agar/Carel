@@ -13,6 +13,10 @@ public class CarelGrid extends Object {
         map[3][3] = 1;
         map[3][2] = 0;
 
+        walls = new String[6][4];
+        walls[2][0] = wallBlock;
+        walls[2][1] = wallBlock;
+
     }
 
     public int getWidth() {
@@ -37,14 +41,6 @@ public class CarelGrid extends Object {
 
     public int getCarelDirectionY(){
         return carelDirectionY;
-    }
-
-    public int getWallX(){
-        return wallX;
-    }
-
-    public int getWallY() {
-        return wallY;
     }
 
     public boolean isCarelDead() {
@@ -75,13 +71,6 @@ public class CarelGrid extends Object {
         carelDead = dead;
     }
 
-    public void setWallX(int wallX) {
-        this.wallX = wallX;
-    }
-
-    public void setWallY(int wallY) {
-        this.wallY = wallY;
-    }
 
     public void placeBeeper(int x, int y) {
         map[x][y] = map[x][y] + 1;
@@ -101,6 +90,26 @@ public class CarelGrid extends Object {
         return map[x][y];
     }
 
+
+    //walls
+
+    public boolean isWallBlock(int x, int y) {
+        if (walls[x][y] == wallBlock) {
+            return true;
+        }else return false;
+    }
+    public String buildWallBlock(){
+        return wallBlock;
+    }
+
+   /* public int getWallsHeight(){
+        return walls[0].length;
+    }
+
+    public int getWallsWidth(){
+        return walls.length;
+    }*/
+
     private int[][] map = null;
 
     private int carelX = 0;
@@ -111,9 +120,9 @@ public class CarelGrid extends Object {
 
     private int carelDirectionY = 0;
 
-    private int wallX = 0;
+    private String [][] walls = null;
 
-    private int wallY = 0;
+    private String wallBlock = "    \u25A0   ";
 
     private boolean carelDead = false;
 

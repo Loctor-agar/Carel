@@ -30,10 +30,8 @@ public class GameCanvas extends Object {
                 String sector = "";
                 if (j == grid.getCarelX() && i == grid.getCarelY()) {
                     sector = drawCarel(Integer.toString(grid.getBeepersNumber(j, i)), grid);
-                } else if (j == grid.getWallX() && i == grid.getWallY()){
-                    //for (int k = 0; k < grid.getWallBlocksCount; k++){
-                        sector = drawInteriorWall();
-                    //}
+                } else if (grid.isWallBlock(j, i)){
+                        sector = grid.buildWallBlock();
                 } else {
                     sector = "    " + Integer.toString(grid.getBeepersNumber(j, i)) + "    ";
                 }
@@ -48,9 +46,6 @@ public class GameCanvas extends Object {
         drawWall(grid);
     }
 
-    private String drawInteriorWall() {
-        return "    \u25A0   ";
-    }
 
     private void drawWall(CarelGrid grid) {
         for (int i = 0; i < grid.getWidth(); i++) {
