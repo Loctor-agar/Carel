@@ -1,16 +1,21 @@
 package kg.kloop.rinat.newcarel;
 
 
+import java.util.Random;
+
 /**
- * Created by admin on 02.12.2015.
- */
+ * Этот класс содержит данные поля */
 public class CarelGrid extends Object {
 
     public CarelGrid() {
-        map = new int[6][4];
-        map[1][1] = 1;
-        map [3][3] = 1;
-        map [3] [2] = 1;
+        if (getWidth() >= 4 && getHeight() >= 4) {
+            for (int i = 0; i < getWidth(); i++) {
+                map[random.nextInt(getWidth())][0] = random.nextInt(2);
+            }
+            map[1][1] = 1;
+            map[3][3] = 1;
+            map[3][2] = 1;
+        }
     }
 
     public int getWidth() {
@@ -65,6 +70,8 @@ public class CarelGrid extends Object {
         carelDead = dead;
     }
 
+
+
     public void placeBeeper(int x, int y) {
         map[x][y] = map[x][y] + 1;
     }
@@ -94,4 +101,6 @@ public class CarelGrid extends Object {
     private int carelDirectionY = 0;
 
     private boolean carelDead = false;
+
+    Random random = new Random();
 }

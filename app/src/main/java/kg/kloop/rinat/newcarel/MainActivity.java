@@ -7,7 +7,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    
+
     private TextView textView;
     private CarelGrid grid;
     private GameCanvas canvas;
@@ -24,6 +24,13 @@ public class MainActivity extends AppCompatActivity {
 
         //Здесь пишем, что Карел должен делать.********************
 
+        //Задание: Карел должен выстроить колонны вниз от каждого бипера,
+        // который он найдет на первой линии
+
+
+
+
+
 
         //Дальше ничего не меняем.*********************************
 
@@ -35,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     //Дальше ничего не меняем.*************************************
-    
+
 
 
 
@@ -43,23 +50,23 @@ public class MainActivity extends AppCompatActivity {
     private void move(){
         carel.move();
     }
-    
+
     private void turnLeft(){
         carel.turnLeft();
     }
-    
+
     private void collectBeeper(){
         carel.collectBeeper();
     }
-    
+
     private void dropBeeper(){
         carel.dropBeeper();
     }
-    
+
     private boolean isFrontClear(){
         return carel.isFrontClear();
     }
-    
+
     private boolean isBeeper(){
         return carel.isBeeper();
     }
