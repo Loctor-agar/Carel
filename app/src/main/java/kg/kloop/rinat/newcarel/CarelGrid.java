@@ -8,6 +8,7 @@ import java.util.Random;
 public class CarelGrid extends Object {
 
     public CarelGrid() {
+            map = new int[6][4];
             map[1][1] = 0;
             map[3][3] = 0;
             map[3][2] = 0;
@@ -97,5 +98,4 @@ public class CarelGrid extends Object {
 
     private boolean carelDead = false;
 
-    Random random = new Random();
 }
