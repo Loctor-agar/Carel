@@ -91,7 +91,7 @@ public class Carel extends Object{
     }
 
     private boolean outOfBounds (int x, int y) {
-        if (x >= grid.getWidth() || y >= grid.getHeight() || x<0 || y<0) {
+        if (x >= grid.getWidth() || y >= grid.getHeight() || x<0 || y<0 || grid.isWallBlock(x, y)) {
             return true;
         } else return false;
     }

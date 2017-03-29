@@ -14,8 +14,9 @@ public class CarelGrid extends Object {
         map[3][2] = 0;
 
         walls = new String[6][4];
-        walls[2][0] = wallBlock;
         walls[2][1] = wallBlock;
+        walls[2][2] = wallBlock;
+        walls[2][3] = wallBlock;
 
     }
 
