@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         //Задание: Карел должен выложить биперы на всем поле в шахматном порядке
-
+        while(isFrontClear()) move();
 
 
 
