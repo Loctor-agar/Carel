@@ -8,11 +8,16 @@ import java.util.Random;
 public class CarelGrid extends Object {
 
     public CarelGrid() {
-        if (getWidth() >= 4 && getHeight() >= 4) {
-            map[1][1] = 1;
-            map[3][3] = 1;
-            map[3][2] = 1;
-        }
+        map = new int[6][4];
+        map[1][1] = 1;
+        map[3][3] = 1;
+        map[3][2] = 0;
+
+        walls = new String[6][4];
+        walls[2][1] = wallBlock;
+        walls[2][2] = wallBlock;
+        walls[2][3] = wallBlock;
+
     }
 
     public int getWidth() {
@@ -68,7 +73,6 @@ public class CarelGrid extends Object {
     }
 
 
-
     public void placeBeeper(int x, int y) {
         map[x][y] = map[x][y] + 1;
     }
@@ -87,6 +91,26 @@ public class CarelGrid extends Object {
         return map[x][y];
     }
 
+
+    //walls
+
+    public boolean isWallBlock(int x, int y) {
+        if (walls[x][y] == wallBlock) {
+            return true;
+        }else return false;
+    }
+    public String buildWallBlock(){
+        return wallBlock;
+    }
+
+   /* public int getWallsHeight(){
+        return walls[0].length;
+    }
+
+    public int getWallsWidth(){
+        return walls.length;
+    }*/
+
     private int[][] map = null;
 
     private int carelX = 0;
@@ -97,7 +121,10 @@ public class CarelGrid extends Object {
 
     private int carelDirectionY = 0;
 
+    private String [][] walls = null;
+
+    private String wallBlock = "    \u25A0   ";
+
     private boolean carelDead = false;
 
-    Random random = new Random();
 }
