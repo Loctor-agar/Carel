@@ -11,12 +11,7 @@ public class CarelGrid extends Object {
         map = new int[6][4];
         map[1][1] = 1;
         map[3][3] = 1;
-        map[3][2] = 0;
-
-        walls = new String[6][4];
-        walls[2][1] = wallBlock;
-        walls[2][2] = wallBlock;
-        walls[2][3] = wallBlock;
+        map[3][2] = 1; //  отрицательное значение построит блок стены
 
     }
 
@@ -93,23 +88,10 @@ public class CarelGrid extends Object {
 
 
     //walls
-
-    public boolean isWallBlock(int x, int y) {
-        if (walls[x][y] == wallBlock) {
-            return true;
-        }else return false;
-    }
     public String buildWallBlock(){
         return wallBlock;
     }
 
-   /* public int getWallsHeight(){
-        return walls[0].length;
-    }
-
-    public int getWallsWidth(){
-        return walls.length;
-    }*/
 
     private int[][] map = null;
 
@@ -120,8 +102,6 @@ public class CarelGrid extends Object {
     private int carelDirectionX = 1;
 
     private int carelDirectionY = 0;
-
-    private String [][] walls = null;
 
     private String wallBlock = "    \u25A0   ";
 
