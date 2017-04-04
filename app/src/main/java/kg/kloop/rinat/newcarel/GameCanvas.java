@@ -44,6 +44,7 @@ public class GameCanvas extends Object {
             }
         }
         drawWall(grid);
+        Log.v("CarelDebug", view.getText().toString());
     }
 
     private void drawWall(CarelGrid grid) {
