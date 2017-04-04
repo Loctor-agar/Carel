@@ -89,7 +89,7 @@ public class CarelGrid extends Object {
 
     //walls
     public String buildWallBlock(){
-        return wallBlock;
+        return "    \u25A0   ";
     }
 
 
@@ -102,8 +102,6 @@ public class CarelGrid extends Object {
     private int carelDirectionX = 1;
 
     private int carelDirectionY = 0;
-
-    private String wallBlock = "    \u25A0   ";
 
     private boolean carelDead = false;
 
