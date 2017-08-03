@@ -24,7 +24,15 @@ public class MainActivity extends AppCompatActivity {
 
         //Здесь пишем, что Карел должен делать.********************
 
-
+    while (true){
+        ClearRow();
+        turnRight();
+        if(!isFrontClear()){
+            returnHome();
+            break;
+        }
+        gotonextRow();
+    }
 
 
 
@@ -36,6 +44,55 @@ public class MainActivity extends AppCompatActivity {
 
     }//Здесь пишем новые методы.***********************************
 
+    private void gotonextRow() {
+        move();
+        turnRight();
+        moveToWall();
+        uTurn();
+
+
+    }
+
+    private void moveToWall() {
+      while (isFrontClear()){
+        move();}
+    }
+
+
+    private void returnHome() {
+        turnRight();
+        moveToWall();
+        turnRight();
+        moveToWall();
+        turnRight();
+    }
+
+    private void uTurn() {
+        turnLeft();
+        turnLeft();
+    }
+
+    private void turnRight() {
+        for(int i=0;i<3;i++){
+            turnLeft();
+        }
+
+    }
+
+    private void ClearRow() {
+        while(true){
+            clearCell();
+            if(isFrontClear()){
+                move();
+            }else break;
+        }
+    }
+
+    private void clearCell() {
+        while(isBeeper()){
+            collectBeeper();
+        }
+    }
 
 
     //Дальше ничего не меняем.*************************************
